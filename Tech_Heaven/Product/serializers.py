@@ -2,8 +2,9 @@ from rest_framework import serializers
 
 # from models
 from .models import (
-    Desktop, DesktopRam, GamingDesktop, Laptop, Laptop_Ram, GamingLaptop, PowerSupply,
-    Processor, SolidDrive, HardDrive, CpuCooler, Macbook, ImacDesktop, MotherBoard
+    Desktop, GamingDesktop, Laptop, Laptop_Ram, GamingLaptop, PowerSupply,
+     SolidDrive, HardDrive, CpuCooler, MotherBoard,DekstopRam,Processore,GraphicsCard,Mackbook,
+     ImacDekstop
 )
 
 # Desktop data being serialized and deserialized
@@ -15,7 +16,7 @@ class DesktopSerializer(serializers.ModelSerializer):
 # Desktop RAM data being serialized and deserialized
 class DesktopRamSerializer(serializers.ModelSerializer):
     class Meta:
-        model = DesktopRam
+        model = DekstopRam
         fields = '__all__'
 
 # Gaming Desktop data being serialized and deserialized
@@ -51,7 +52,7 @@ class PowerSupplySerializer(serializers.ModelSerializer):
 # Processor data being serialized and deserialized
 class ProcessorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Processor
+        model = Processore
         fields = '__all__'
 
 # Solid Drive data being serialized and deserialized
@@ -75,17 +76,23 @@ class CpuCoolerSerializer(serializers.ModelSerializer):
 # MacBook data being serialized and deserialized
 class MacbookSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Macbook
+        model = Mackbook
         fields = '__all__'
 
 # iMac Desktop data being serialized and deserialized
 class ImacDesktopSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ImacDesktop
+        model = ImacDekstop
         fields = '__all__'
 
 # MotherBoard data being serialized and deserialized
 class MotherBoardSerializer(serializers.ModelSerializer):
     class Meta:
         model = MotherBoard
+        fields = '__all__'
+
+# Graphics card data being serialized and deserialized
+class GraphicsCardSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GraphicsCard
         fields = '__all__'
